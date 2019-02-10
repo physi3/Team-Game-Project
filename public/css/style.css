@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+body, body * {
+    margin:0px;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 15%;
+    top:0px;
+    background-color: #9e9fa8;
+}
+
+.header h1 {
+    margin-left:3em;
+    font-size:3em;
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 4px;
+}
+
+.nav-menu {
+    z-index: 5;
+    position: sticky;
+    top:0;
+    width: 100%;
+    height: 20%;
+    background-color: #a8ad9a;
+}
+
+.nav-menu a {
+    margin-right: 1em;
+    text-decoration: none;
+    font-size:2em;
+    color:white;
+    background-color: #96a372;
+}
+
+.nav-menu a:hover {
+    background-color: #626b4a;
+}
+
+.content {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 20%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.content h1 {
+    font-size: 2em;
+}
+.content h2 {
+    font-size: 1.75em;
+}
+.content h3 {
+    font-size: 1.5em;
+}
+.content h4 {
+    font-size: 1.25em;
+}
+.content p {
+    font-size: 1em;
+}
+.content a {
+    font-size: 1em;
+    text-decoration: none;
+    background-color: cadetblue;
+}
