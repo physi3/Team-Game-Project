@@ -1,0 +1,26 @@
+{
+  "name": "team-game-project",
+  "version": "1.0.0",
+  "description": "A web app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/physi3/Team-Game-Project.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "Olly de Vulder & Joseph Marriage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/physi3/Team-Game-Project/issues"
+  },
+  "homepage": "https://github.com/physi3/Team-Game-Project#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
