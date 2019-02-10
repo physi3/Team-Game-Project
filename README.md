@@ -1,5 +1,5 @@
 # Team Game Project
-[The Website](https://www.google.com "This is a link to the website.")
+[The Website](https://game-proj.herokuapp.com/ "This is a link to the website.")
 
 ## Idea
 * Some kind of game where progress is stored
