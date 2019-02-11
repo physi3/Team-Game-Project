@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 var app = express();
 
@@ -19,4 +20,8 @@ app.get('/game', (req, res) => {
 
 app.listen(port, () => {
     console.log('app is running on port ' + port);
+});
+
+process.on('SIGTERM', () => {
+    destroyPool();
 });
