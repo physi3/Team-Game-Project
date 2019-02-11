@@ -1,5 +1,5 @@
 # Team Game Project
-[Team Game Project](conquer-galaxy.herokuapp.com "This is a link to the website.")
+[Team Game Project](https://conquer-galaxy.herokuapp.com "This is a link to the website.")
 ## Idea
 * Some kind of game where progress is stored
 * Strategic kind of empire game - like clash of clans
