@@ -1,12 +1,13 @@
 
 function setup() {
-  createCanvas(100, 50);
+  createCanvas(1000, 500);
   background(153);
-  line(0, 0, width, height);
 }
 
-
+var x = 100;
 
 function draw() {
-  // put drawing code here
+  background(153);
+  ellipse(x,100,100,100)
+  x+=3
 }
