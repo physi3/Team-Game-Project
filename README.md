@@ -1,4 +1,4 @@
-# Team Game Project [The Website](conquer-galaxy.herokuapp.com "This is a link to the website.")
+# [Team Game Project](conquer-galaxy.herokuapp.com "This is a link to the website.")
 =======
 
 ## Idea
