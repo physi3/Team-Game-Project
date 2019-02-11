@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 # Team Game Project
-[The Website](conquer-galaxy.herokuapp.com "This is a link to the website.")
-=======
-# [Team Game Project](conquer-galaxy.herokuapp.com "This is a link to the website.")
-=======
->>>>>>> 70e333a6a4a3e9eb5c118f76b15e0927cf56f069
-
+[Team Game Project](conquer-galaxy.herokuapp.com "This is a link to the website.")
 ## Idea
 * Some kind of game where progress is stored
 * Strategic kind of empire game - like clash of clans
