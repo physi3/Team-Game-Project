@@ -10,10 +10,12 @@ function createPool(db_url) {
         connectionString: db_url,
         ssl: true
     });
+    console.log('created pool');
 }
 
 function destroyPool() {
     pool.end();
+    console.log('Pool ended.');
 }
 
 function query(q) {
