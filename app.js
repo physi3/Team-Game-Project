@@ -26,5 +26,5 @@ app.listen(port, () => {
 });
 
 process.on('SIGTERM', () => {
-    //destroyPool();
+    destroyPool();
 });
