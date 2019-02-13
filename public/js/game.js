@@ -1,4 +1,3 @@
-
 let scale = 1;
 let last = 100;
 let square;
@@ -10,9 +9,10 @@ var yOffset = 0.0;
 var locked = false;
 var bx = 0;
 var by = 0;
- //Various variable declorations
+//Various variable declorations
 
 var sunImg=[];
+var planetHumanImg, planetAlienImg, planetLifelessImg;
 
 //Specific Images
 function addSun(centerX,centerY) {
@@ -51,7 +51,6 @@ class Square {
     fill(this.color)
     rect(this.XAppearance(), this.YAppearance(),this.sizeAppearance(),this.sizeAppearance())
     if (this.img != "None"){
-      print(this.img, this.XAppearance(), this.YAppearance(),this.sizeAppearance(), this.sizeAppearance())
       image(this.img, this.XAppearance(), this.YAppearance(),this.sizeAppearance(), this.sizeAppearance())
     }
   }
@@ -69,9 +68,12 @@ class Square {
 } //Sqaure Class
 
 function setup() {
-  for (let i = 0; i <= 9; i++) {
+  for (let i = 1; i <= 9; i++) {
     sunImg[i] = loadImage("../icons/sun/"+i+".png")
   }
+  planetHumanImg = loadImage("../icons/planetHuman.png")
+  planetAlienImg = loadImage("../icons/planetAlien.png")
+  planetLifelessImg = loadImage("../icons/planetLifeless.png")
 
   createCanvas(600, 400);
   noStroke();
@@ -91,7 +93,6 @@ function setup() {
 }
 
 function draw() {
-  print(sunImg)
   scale = last/1000;
   background(100)
   
