@@ -4,7 +4,7 @@ let square;
 let back = [];
 let darker = false;
 let colorU;
-var xOffset = 0.0;
+var xOffset = 0.0; 
 var yOffset = 0.0;
 var locked = false;
 var bx = 300;
@@ -38,7 +38,7 @@ class Square {
     this.img = "None";
 
   }
-
+  
   XAppearance() {
     return ((this.x*scale)+bx);
   }
@@ -71,14 +71,11 @@ class Square {
 
 function setup() {
   for (let i = 1; i <= 9; i++) {
-    sunImg[i] = loadImage("../icons/sun/"+i+".png")
+    sunImg[i] = loadImage("../images/sun/"+i+".png")
   }
-  planetHumanImg = loadImage("../icons/planetHuman.png")
-  planetAlienImg = loadImage("../icons/planetAlien.png")
-  planetLifelessImg = loadImage("../icons/planetLifeless.png")
-
-  randSunX = int(random(20, 40));
-  randSunY = int(random(10, 30));
+  planetHumanImg = loadImage("../images/planetHuman.png")
+  planetAlienImg = loadImage("../images/planetAlien.png")
+  planetLifelessImg = loadImage("../images/planetLifeless.png")
 
   createCanvas(600, 400);
   noStroke();
@@ -100,9 +97,9 @@ function setup() {
 function draw() {
   scale = last/1000;
   background(100)
-
+  
   for (let i = 0; i < back.length; i++) {
-    for (let j = 0; j < back[i].length; j++) {
+    for (let j = 0; j < back[i].length; j++) {	
       back[i][j].color = back[i][j].originalColor;
       if (back[i][j].hovering() == true) {
         back[i][j].color = back[i][j].originalColor+10;
@@ -127,16 +124,16 @@ function mouseWheel(event) {
   }
 }
 
-function mousePressed() {
-  locked = true;
-  xOffset = mouseX-bx;
-  yOffset = mouseY-by;
+function mousePressed() { 
+  locked = true; 
+  xOffset = mouseX-bx; 
+  yOffset = mouseY-by; 
 
 }
 function mouseDragged() {
   if(locked) {
-    bx = mouseX-xOffset;
-    by = mouseY-yOffset;
+    bx = mouseX-xOffset; 
+    by = mouseY-yOffset; 
   }
 }
 
