@@ -1,12 +1,11 @@
 require('dotenv').config(); // for running locally
 
-
-
 const express      = require('express');
 
 // middleware
 const bodyParser   = require('body-parser')
 const cookieParser = require('cookie-parser');
+const helmet       = require('helmet');
 const setLocals    = require('./middleware/set_locals');
 
 // my modules
@@ -19,6 +18,7 @@ var app = express();
 
 app.set('view engine', 'ejs'); // set the view engine to ejs
 
+app.use(helmet()); // security headers
 app.use(cookieParser()); // parsing cookies
 app.use(bodyParser.urlencoded({extended: true})); // for parsing form-data
 app.use(setLocals.setLocals); // set res.locals for ejs
