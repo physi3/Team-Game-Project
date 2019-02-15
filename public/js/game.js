@@ -7,8 +7,8 @@ let colorU;
 var xOffset = 0.0;
 var yOffset = 0.0;
 var locked = false;
-var bx = 0;
-var by = 0;
+var bx = 300;
+var by = 200;
 let randSunX; //Saved
 let randSunY; //Saved
 //Various variable declorations
@@ -17,16 +17,16 @@ var sunImg=[];
 var planetHumanImg, planetAlienImg, planetLifelessImg;
 
 //Specific Images
-function addSun(centerX,centerY) {
-  back[centerX-1][centerY-1].addImage(sunImg[1])
-  back[centerX][centerY-1].addImage(sunImg[2])
-  back[centerX+1][centerY-1].addImage(sunImg[3])
-  back[centerX-1][centerY].addImage(sunImg[4])
-  back[centerX][centerY].addImage(sunImg[5])
-  back[centerX+1][centerY].addImage(sunImg[6])
-  back[centerX-1][centerY+1].addImage(sunImg[7])
-  back[centerX][centerY+1].addImage(sunImg[8])
-  back[centerX+1][centerY+1].addImage(sunImg[9])
+function drawSun(centerX,centerY) {
+  back[centerX-1][centerY-1].addImage(sunImg[1]);
+  back[centerX][centerY-1].addImage(sunImg[2]);
+  back[centerX+1][centerY-1].addImage(sunImg[3]);
+  back[centerX-1][centerY].addImage(sunImg[4]);
+  back[centerX][centerY].addImage(sunImg[5]);
+  back[centerX+1][centerY].addImage(sunImg[6]);
+  back[centerX-1][centerY+1].addImage(sunImg[7]);
+  back[centerX][centerY+1].addImage(sunImg[8]);
+  back[centerX+1][centerY+1].addImage(sunImg[9]);
 }
 
 class Square {
@@ -92,7 +92,7 @@ function setup() {
       } else {
         colorU = color(15,15,15)
       }
-      back[i][j] = new Square(i*100, j*100, colorU);
+      back[i][j] = new Square(i*100-3000, j*100-2000, colorU);
     }
   } //Calculate Background Sqaures
 }
@@ -110,7 +110,7 @@ function draw() {
     }
   } //Highlight Hovering Sqaures
 
-  addSun(randSunX,randSunY);
+  drawSun(randSunX,randSunY);
 
   for (let i = 0; i < back.length; i++) {
     for (let j = 0; j < back[i].length; j++) {
