@@ -70,6 +70,9 @@ class Square {
 } //Sqaure Class
 
 function setup() {
+  randSunX = int(random(10,50))
+  randSunY = int(random(10,30))
+
   for (let i = 1; i <= 9; i++) {
     sunImg[i] = loadImage("../images/sun/"+i+".png")
   }
