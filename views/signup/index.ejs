@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../partials/head%>
+    </head>
+
+    <body>
+        <% include ../partials/header%>
+        <% include ../partials/navbar%>
+
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" value="<%- post ? username : ''%>">
+            <br><span class="form-error"><%- post ? username_error: '' %></span>
+            <br>
+            <input type="password" placeholder="Password" name="password">
+            <br><span class="form-error"><%- post ? password_error: '' %></span>
+            <br>
+            <input type="password" placeholder="Password" name="password_check">
+            <br><span class="form-error"><%- post ? password_check_error: '' %></span><br>
+
+            <input type="submit" name="submit" value="Sign Up">
+        </form>
+        <section class="content">
+            <p>Password must:</p>
+            <ul>
+                <li>be between 8 and 50 characters long</li>
+                <li>contain at least 1 digit</li>
+                <li>contain no spaces</li>
+            </ul>
+        </section>
+
+        <% include ../partials/footer%>
+    </body>
+</html>

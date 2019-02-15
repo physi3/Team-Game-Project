@@ -18,7 +18,7 @@ body, body * {
     font-size:3em;
     font-family: 'Roboto Slab', serif;
     letter-spacing: 4px;
-    color: #ffffff
+    color: #ffffff;
 }
 
 .nav-menu {
@@ -95,4 +95,32 @@ body, body * {
 
 .footer a {
     text-decoration: none;
+}
+
+form {
+    max-width: 45%;
+    margin: 2em;
+}
+
+form * {
+    font-family:'Roboto Slab', serif;
+    font-size:1em;
+}
+
+input[type=text], input[type=password] {
+    padding:0.5em;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color:lightblue;
+}
+
+input[type=submit] {
+    position: relative;
+    background-color:#aaaaaa;
+    border: none;
+}
+
+form .form-error {
+    color:lightcoral;
 }

@@ -9,7 +9,7 @@ var yOffset = 0.0;
 var locked = false;
 var bx = 0;
 var by = 0;
-//Various variable declorations
+//Various variable declarations
 
 var sunImg=[];
 var planetHumanImg, planetAlienImg, planetLifelessImg;

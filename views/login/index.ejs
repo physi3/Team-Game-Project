@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../partials/head%>
+    </head>
+    <body>
+        <% include ../partials/header%>
+        <% include ../partials/navbar%>
+
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" value="<%- post ? username : '' %>">
+            <br><span class="form-error"><%- post ? username_error : '' %></span>
+            <br>
+            <input type="password" name="password" placeholder="Password">
+            <br><span class="form-error"><%- post ? password_error : '' %></span>
+            <br>
+            <input type="submit" name="submit" value="Login">
+        </form>
+
+        <% include ../partials/footer%>
+    </body>
+</html>

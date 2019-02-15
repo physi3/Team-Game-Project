@@ -20,9 +20,12 @@
   },
   "homepage": "https://github.com/physi3/Team-Game-Project#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "password-validator": "^4.1.1",
     "pg": "^7.8.0"
   }
 }
