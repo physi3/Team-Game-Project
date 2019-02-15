@@ -19,7 +19,6 @@ app.use(cookieParser()); // parsing cookies
 app.use(bodyParser.urlencoded({extended: true})); // for parsing form-data
 app.use(setLocals.setLocals); // set res.locals for ejs
 app.use(express.static(__dirname + '/public')); // get public assets
-app.use(getHttps.getHttps); // force https
 
 app.get('/', (req, res) => {
     res.redirect('/home');
