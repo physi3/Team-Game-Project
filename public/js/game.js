@@ -69,11 +69,11 @@ class Square {
 
 function setup() {
   for (let i = 1; i <= 9; i++) {
-    sunImg[i] = loadImage("../icons/sun/"+i+".png")
+    sunImg[i] = loadImage("../images/sun/"+i+".png")
   }
-  planetHumanImg = loadImage("../icons/planetHuman.png")
-  planetAlienImg = loadImage("../icons/planetAlien.png")
-  planetLifelessImg = loadImage("../icons/planetLifeless.png")
+  planetHumanImg = loadImage("../images/planetHuman.png")
+  planetAlienImg = loadImage("../images/planetAlien.png")
+  planetLifelessImg = loadImage("../images/planetLifeless.png")
 
   createCanvas(600, 400);
   noStroke();
