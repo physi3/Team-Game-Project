@@ -4,7 +4,6 @@ const express      = require('express');
 const bodyParser   = require('body-parser')
 const cookieParser = require('cookie-parser');
 const setLocals    = require('./middleware/set_locals');
-const getHttps     = require('./middleware/https');
 
 const db     = require('./modules/db');
 const home   = require('./modules/home');
