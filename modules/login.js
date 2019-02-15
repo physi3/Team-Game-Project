@@ -38,7 +38,7 @@ async function post(req, res) {
         }
     }
 
-    if (!auth) {
+    if (!auth) { // failed to login
         res.render('login', {
             username_error,
             password_error,

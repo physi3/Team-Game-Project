@@ -1,10 +1,15 @@
-require('dotenv').config();
+require('dotenv').config(); // for running locally
+
+
 
 const express      = require('express');
+
+// middleware
 const bodyParser   = require('body-parser')
 const cookieParser = require('cookie-parser');
 const setLocals    = require('./middleware/set_locals');
 
+// my modules
 const db     = require('./modules/db');
 const home   = require('./modules/home');
 const signup = require('./modules/signup');
@@ -12,7 +17,7 @@ const login  = require('./modules/login');
 
 var app = express();
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); // set the view engine to ejs
 
 app.use(cookieParser()); // parsing cookies
 app.use(bodyParser.urlencoded({extended: true})); // for parsing form-data
@@ -40,11 +45,11 @@ app.get('/signout', (req, res) => {
     res.redirect('back');
 });
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080; // heroku gives a port - otherwise use 8080
 
 app.listen(port, () => {
     console.log('app is running on port ' + port);
-    let c = db.getPool(process.env.DATABASE_URL);
+    db.getPool(process.env.DATABASE_URL); // create pool
 });
 
 process.on('SIGTERM', () => {

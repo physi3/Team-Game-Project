@@ -5,18 +5,18 @@ let pool;
 
 const { genRandomString, getHash } = require('./security');
 
-function getPool(db_url) {
+function getPool(db_url) { // create pool or return it if it already exists
     if (!pool) {
         pool = new Pool({
             connectionString: db_url,
             ssl: true
         });
-        console.log('created pool');
+        console.log('created pool!');
     }
     return pool;
 }
 
-function destroyPool() {
+function destroyPool() { // release all connections in the pool
     pool.end();
     console.log('Pool ended.');
 }
