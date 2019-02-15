@@ -9,9 +9,13 @@ var yOffset = 0.0;
 var locked = false;
 var bx = 0;
 var by = 0;
+<<<<<<< HEAD
 let randSunX; //Saved
 let randSunY; //Saved
 //Various variable declorations
+=======
+//Various variable declarations
+>>>>>>> 95f69b0f4f468fc0e2b7ef7f860d26beff40227f
 
 var sunImg=[];
 var planetHumanImg, planetAlienImg, planetLifelessImg;
