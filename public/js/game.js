@@ -9,6 +9,8 @@ var yOffset = 0.0;
 var locked = false;
 var bx = 0;
 var by = 0;
+let randSunX; //Saved
+let randSunY; //Saved
 //Various variable declorations
 
 var sunImg=[];
@@ -75,6 +77,9 @@ function setup() {
   planetAlienImg = loadImage("../icons/planetAlien.png")
   planetLifelessImg = loadImage("../icons/planetLifeless.png")
 
+  randSunX = int(random(20, 40));
+  randSunY = int(random(10, 30));
+
   createCanvas(600, 400);
   noStroke();
 
@@ -105,7 +110,7 @@ function draw() {
     }
   } //Highlight Hovering Sqaures
 
-  addSun(10,10);
+  addSun(randSunX,randSunY);
 
   for (let i = 0; i < back.length; i++) {
     for (let j = 0; j < back[i].length; j++) {
