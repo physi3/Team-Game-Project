@@ -19,6 +19,7 @@ const login  = require('./modules/login');
 var app = express();
 
 app.set('view engine', 'ejs'); // set the view engine to ejs
+app.enable('trust proxy');
 
 app.use(helmet()); // security headers
 app.use(cookieParser()); // parsing cookies
