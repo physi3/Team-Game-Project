@@ -22,11 +22,11 @@ app.set('view engine', 'ejs'); // set the view engine to ejs
 app.enable('trust proxy');
 
 app.use(helmet()); // security headers
+app.use(forceHttps.forceHttps); // force https
 app.use(cookieParser()); // parsing cookies
 app.use(bodyParser.urlencoded({extended: true})); // for parsing form-data
 app.use(setLocals.setLocals); // set res.locals for ejs
 app.use(express.static(__dirname + '/public')); // get public assets
-app.use(forceHttps.forceHttps); // force https
 
 app.get('/', (req, res) => {
     res.redirect('/home');

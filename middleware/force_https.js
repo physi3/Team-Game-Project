@@ -5,4 +5,5 @@ function forceHttps(req, res, next) {
         res.redirect('https://' + req.hostname + req.originalUrl);
     } else {
         next();
+    }
 }
