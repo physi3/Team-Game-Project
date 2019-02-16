@@ -1,6 +1,6 @@
 module.exports = { get, post };
 
-const { createUser, isUser } = require('./db');
+const { createUser, getUser } = require('./db');
 const passwordValidator = require('password-validator');
 const schema = new passwordValidator();
 
@@ -40,7 +40,7 @@ async function post(req, res) {
     if (!password) { errors.password_error = 'This is required.'; }
     if (!password_check) { errors.password_check_error = 'This is required.'; }
 
-    if (await isUser(username).catch(console.error)) { errors.username_error = 'Username taken.'; }
+    if (await getUser(true, username).catch(console.error)) { errors.username_error = 'Username taken.'; }
 
     if (errors.username_error || errors.password_error || errors.password_check_error) {
         res.render('signup', {

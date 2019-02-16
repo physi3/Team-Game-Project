@@ -1,6 +1,6 @@
 module.exports = { get, post };
 
-const { isUser, setCookie } = require('./db');
+const { getUser, setCookie } = require('./db');
 const { getHash, genRandomString } = require('./security');
 
 function get(req, res) {
@@ -24,7 +24,7 @@ async function post(req, res) {
     let auth = false;
 
     if (username_error == '') {
-        var user = await isUser(username).catch(err => {
+        var user = await getUser(true, username).catch(err => {
             console.error(err);
             username_error = 'Could\'t get user.';
         });

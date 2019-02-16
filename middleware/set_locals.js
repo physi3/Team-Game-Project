@@ -1,8 +1,8 @@
 module.exports = { setLocals };
 
-const { getCookieByCookie } = require('../modules/db');
+const { getCookie, getUser } = require('../modules/db');
 
-function setLocals(req, res, next) {
+async function setLocals(req, res, next) {
     res.locals.post = req.method == 'POST';
     
     if (!req.cookies['key']) {
@@ -12,17 +12,28 @@ function setLocals(req, res, next) {
     }
 
     // if they have cookie check it
-    getCookieByCookie(req.cookies['key'])
+    await getCookie(false, req.cookies['key'])
         .then(re => {
             if (!re) { // the cookie is not in the db
                 res.locals.logged_in = false;
             } else {
                 res.locals.logged_in = true;
+                res.locals.id = re.id;
             }
         })
         .catch(err => {
             res.locals.logged_in = false;
-        }).finally(() => {
-            next();
         });
+
+    if (!res.locals.logged_in)  {next(); return; } // if not logged in there is no need to continue
+    
+    await getUser(false, res.locals.id)
+    .then(re => {
+        res.locals.username = re.name;
+    })
+    .catch(err => {
+        res.locals.error = true;
+    });
+
+    next();
 }

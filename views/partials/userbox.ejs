@@ -1,0 +1,11 @@
+<!--partials/userbox.js-->
+<div class="user-box">
+    <% if (logged_in) { %>
+        <p>logged in as <%= username %> (<a href="/signout">sign out</a>)</p>
+        
+    <% } else { %>
+        <p>Not logged in.</p>
+        <p><a href="/signup">Make an account</a></p>
+        <p><a href="/login">Log in to an existing account</a></p>
+    <% } %>
+</div>
