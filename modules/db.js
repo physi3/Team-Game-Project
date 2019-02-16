@@ -16,7 +16,7 @@ function getPool(db_url) { // create pool or return it if it already exists
     return pool;
 }
 
-function destroyPool() { // release all connections in the pool
+function destroyPool() { // release all connections in the pool 
     pool.end();
     console.log('Pool ended.');
 }

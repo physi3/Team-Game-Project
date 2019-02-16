@@ -6,7 +6,9 @@ const express      = require('express');
 const bodyParser   = require('body-parser')
 const cookieParser = require('cookie-parser');
 const helmet       = require('helmet');
+// my middleware
 const setLocals    = require('./middleware/set_locals');
+const forceHttps   = require('./middleware/force_https');
 
 // my modules
 const db     = require('./modules/db');
@@ -23,6 +25,7 @@ app.use(cookieParser()); // parsing cookies
 app.use(bodyParser.urlencoded({extended: true})); // for parsing form-data
 app.use(setLocals.setLocals); // set res.locals for ejs
 app.use(express.static(__dirname + '/public')); // get public assets
+app.use(forceHttps.forceHttps); // force https
 
 app.get('/', (req, res) => {
     res.redirect('/home');
