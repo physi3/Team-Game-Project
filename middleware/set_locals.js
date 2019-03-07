@@ -16,6 +16,8 @@ async function setLocals(req, res, next) {
         .then(re => {
             if (!re) { // the cookie is not in the db
                 res.locals.logged_in = false;
+                res.redirect('/signout');
+                next();
             } else {
                 res.locals.logged_in = true;
                 res.locals.id = re.id;

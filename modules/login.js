@@ -28,7 +28,7 @@ async function post(req, res) {
             console.error(err);
             username_error = 'Could\'t get user.';
         });
-        if (user == undefined) { username_error = 'That user does not exist.'; }
+        if (!user) { username_error = 'That user does not exist.'; }
         else {
             if (user.hash === getHash(password, user.salt).hashed) {
                 auth = true;
