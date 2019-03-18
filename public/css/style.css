@@ -88,6 +88,7 @@ a {
     bottom: 0px;
     text-align:center;
     background-color:black;
+    z-index: 7;
 }
 
 .footer * {
@@ -100,6 +101,7 @@ a {
 
 .footer a {
     text-decoration: none;
+    
 }
 
 form {
@@ -137,6 +139,9 @@ form .form-error {
     height: 80vh;
     background-color:#9c9c9c;
     font-family: 'Roboto Slab', serif;
+    padding: 7px;
+    z-index: 6;
+    background-color: #aed9f1;
 }
 
 .user-box a {
